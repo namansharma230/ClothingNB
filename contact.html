@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - NB Graphics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+  <script src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  <script src="contact.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+
+      <a href=".\assets\images\nblogo1.png" class="logo">
+        <img src=".\assets\images\nblogo1.png" width="73" height="40" alt="Pfolio home">
+      </a>
+    <button class="nav-toggle-btn" data-nav-toggler data-nav-toggle-btn aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+      </button>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <!-- <a href="#section3" class="navbar-link">Skills</a> -->
+             <a href="skills.html" class="navbar-link">Skills</a>
+          </li>
+
+          <li>
+            <!-- <a href="#section2" class="navbar-link">Services</a> -->
+             <a href="services.html" class="navbar-link">Services</a>
+          </li>
+
+          <li>
+            <a href="https://drive.google.com/file/d/1ZS0wS7sgKgsCs-BJG68lGyRSO33OvB6I/view?usp=drive_link" class="navbar-link">Portfolio</a>
+          </li>
+
+          <li>
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+    <div class="overlay"></div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="container">
+        <div class="hero-content">
+            <div class="hero-banner">
+     
+          <!-- <img src="assets/images/Creator.jpg" width="400" height="400" alt="NBGraphics" class="w-100"> -->
+        </div>
+          <h1 class="h1 hero-title">Get in Touch</h2>
+          <h3 class="hero-subtitle">Let's Discuss Your Project</h3>
+          <p class="section-text">
+            Whether you have a question about our services, need a quote, or want to collaborate, feel free to reach out. We're here to help craft your visual identity!
+          </p>
+          <a href="https://drive.google.com/file/d/1ZS0wS7sgKgsCs-BJG68lGyRSO33OvB6I/view?usp=drive_link" class="btn has-before">
+              <span class="span">Drop A Querry</span>
+
+              <ion-icon name="download-outline" aria-hidden="true"></ion-icon>
+            </a>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact-form">
+      <div class="container">
+        <div class="title-wrapper">
+          <h2 class="section-title">Contact Us</h2>
+          <h3 class="section-title">Send Your Queries</h3>
+          <p class="section-text">
+            Fill out the form below to drop your query, and we'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Query</button>
+          </form>
+
+          <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:[email protected]">[email protected]</a></p>
+            <p><ion-icon name="call-outline"></ion-icon> +91 9983001339</p>
+            <p><ion-icon name="location-outline"></ion-icon> Rajasthan-Delhi</p>
+            <h4>Connect With Us</h4>
+            <ul class="social-list">
+              <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="container">
+        <div class="title-wrapper">
+          <h2 class="section-title">Feedback</h2>
+          <h3 class="section-title">Share Your Experience</h3>
+          <p class="section-text">
+            Your feedback helps us improve. Rate our services and leave a comment below.
+          </p>
+        </div>
+
+        <form class="feedback-form">
+          <div class="form-group">
+            <label for="feedback-name">Name</label>
+            <input type="text" id="feedback-name" name="feedback-name" required>
+          </div>
+          <div class="form-group">
+            <label for="feedback-email">Email</label>
+            <input type="email" id="feedback-email" name="feedback-email" required>
+          </div>
+          <div class="form-group">
+            <label>Rating</label>
+            <div class="star-rating">
+              <input type="radio" id="5-stars" name="rating" value="5" />
+              <label for="5-stars" class="star">&#9733;</label>
+              <input type="radio" id="4-stars" name="rating" value="4" />
+              <label for="4-stars" class="star">&#9733;</label>
+              <input type="radio" id="3-stars" name="rating" value="3" />
+              <label for="3-stars" class="star">&#9733;</label>
+              <input type="radio" id="2-stars" name="rating" value="2" />
+              <label for="2-stars" class="star">&#9733;</label>
+              <input type="radio" id="1-star" name="rating" value="1" />
+              <label for="1-star" class="star">&#9733;</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="feedback-message">Comment</label>
+            <textarea id="feedback-message" name="feedback-message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Submit Feedback</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="title-wrapper">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <h3 class="section-title">Good Questions Answered</h3>
+          <p class="section-text">
+            Here are some common questions about our services and processes.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <button class="accordion">What services do you offer?</button>
+          <div class="panel">
+            <p>We offer logo designing, social media advertisements, menu designing, clothing designs, brochures, and catalog designing.</p>
+          </div>
+
+          <button class="accordion">How long does a project take?</button>
+          <div class="panel">
+            <p>It depends on the scope, but typically 1-4 weeks. We'll provide a timeline after discussing your needs.</p>
+          </div>
+
+          <button class="accordion">What is your pricing?</button>
+          <div class="panel">
+            <p>Pricing varies by project. Contact us for a custom quote.</p>
+          </div>
+
+          <button class="accordion">Do you provide revisions?</button>
+          <div class="panel">
+            <p>Yes, we offer up to 3 revisions included in our packages.</p>
+          </div>
+
+          <button class="accordion">How can I get started?</button>
+          <div class="panel">
+            <p>Fill out the contact form above, and we'll reach out to discuss your project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <h3 class="footer-title">Get in touch</h3>
+          <p><a href="mailto:[email protected]">[email protected]</a></p>
+          <p>+91 9983001339</p>
+          <h4>Connect With Us</h4>
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
+        </div>
+
+        <div class="footer-content">
+          <h3 class="footer-title">Locations</h3>
+          <p>Rajasthan-Delhi</p>
+        </div>
+
+        <div class="footer-content">
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>

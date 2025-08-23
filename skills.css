@@ -1,0 +1,237 @@
+/*-----------------------------------*\
+  #skills.css
+\*-----------------------------------*/
+
+.skills-hero {
+  padding-block-start: 150px;
+  position: relative;
+  overflow: hidden;
+  background: var(--eerie-black);
+}
+
+.skills-hero .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.skills-hero .hero-content {
+  width: 50%;
+  z-index: 1;
+}
+
+.skills-hero .hero-title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: fadeInUp 1.3s var(--cubic-ease-out);
+  color: var(--white);
+  text-shadow: 2px 2px 0 var(--eerie-black);
+  /* word-break: break-all; */
+  padding-left: 5%;
+  /* font-size: 240%;
+  font-weight: 1300; */
+  word-break: normal;
+  font-size: var(--fs-1);
+  font-weight: var(--fw-800);
+  color: var(--white);
+  line-height: 1;
+
+  
+}
+
+.skills-hero .hero-subtitle {
+  color: var(--white);
+  font-size: var(--fs-6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s var(--cubic-ease-out) 0.2s;
+  animation-fill-mode: both;
+  padding-left: 5%;
+}
+
+.skills-hero .section-text {
+  margin-bottom: 40px;
+  animation: fadeInUp 1.2s var(--cubic-ease-out) 0.2s;
+  animation-fill-mode: both;
+  color: var(--roman-silver);
+  padding-left: 5%;
+}
+
+.skills-hero .btn {
+  margin-inline: 0;
+  animation: fadeInUp 0.8s var(--cubic-ease-out) 0.6s;
+  animation-fill-mode: both;
+}
+
+.skills-hero .hero-banner {
+  width: 50%;
+}
+
+.skills-hero .img-holder {
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+
+.skills {
+  padding-block-start: 100px;
+  position: relative;
+  overflow: hidden;
+  background: var(--eerie-black);
+}
+
+.skills .container {
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.skills .title-wrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills .section-title {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.skills .section-text {
+  max-width: 50ch;
+  margin-inline: auto;
+  color: var(--roman-silver);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.service-card {
+  position: relative;
+  background-color: var(--white);
+  padding: 60px 40px 40px;
+  border-radius: 10px;
+  transition: var(--transition-2);
+  text-align: center;
+  border: 2px solid var(--white_a10);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover {
+  background-color: var(--raisin-black);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px var(--white_a10);
+  --content-color: var(--white);
+}
+
+.service-card .card-icon ion-icon {
+  color: var(--content-color, var(--raisin-black));
+  font-size: 6rem;
+  --ionicon-stroke-width: 15px;
+  margin-inline: auto;
+}
+
+.service-card:nth-child(1) .card-icon ion-icon { color: var(--content-color, #ff6b6b); }
+.service-card:nth-child(2) .card-icon ion-icon { color: var(--content-color, #4ecdc4); }
+.service-card:nth-child(3) .card-icon ion-icon { color: var(--content-color, #45b7d1); }
+.service-card:nth-child(4) .card-icon ion-icon { color: var(--content-color, #96ceb4); }
+.service-card:nth-child(5) .card-icon ion-icon { color: var(--content-color, #ffeead); }
+
+.service-card .card-title {
+  color: var(--content-color, var(--raisin-black));
+  margin-block: 20px;
+}
+
+.service-card .card-text {
+  color: var(--content-color, var(--roman-silver));
+  font-size: var(--fs-7);
+  line-height: 1.8;
+}
+
+.service-card .card-number {
+  margin-inline-start: auto;
+  font-weight: var(--fw-800);
+  line-height: 0.6;
+  max-width: max-content;
+  margin-block-start: 32px;
+  -webkit-text-stroke: 1px var(--content-color, var(--black));
+  -webkit-text-fill-color: transparent;
+  opacity: 0.3;
+}
+
+.skills .btn {
+  margin-inline: auto;
+  margin-top: 60px;
+  animation: fadeInUp 0.8s var(--cubic-ease-out) 0.6s;
+  animation-fill-mode: both;
+}
+
+.social-link ion-icon {
+  color: var(--roman-silver);
+  transition: color var(--transition-1);
+}
+
+.social-link:hover ion-icon {
+  color: var(--white);
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-link.active {
+  color: var(--white);
+  text-shadow: 1px 0 0 var(--eerie-black);
+}
+
+@media (max-width: 768px) {
+  .skills-hero .container {
+    flex-direction: column;
+    gap: 30px;
+    padding-inline: 20px;
+  }
+
+  .skills-hero .hero-content,
+  .skills-hero .hero-banner {
+    width: 100%;
+  }
+
+  .skills-hero .hero-banner {
+    order: -1;
+    height: 300px;
+  }
+
+  .skills .container {
+    padding-inline: 20px;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 40px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .skills-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
