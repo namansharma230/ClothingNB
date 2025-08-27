@@ -13,6 +13,54 @@ const addEventOnElements = function (elements, eventType, callback) {
 }
 
 
+/**
+ * IMAGE MODAL
+ */
+
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImage");
+const closeBtn = document.getElementsByClassName("close")[0];
+const layerLinks = document.querySelectorAll(".layer-link");
+
+// Automatically set data-image attribute for all layer links
+layerLinks.forEach(link => {
+  // Find the closest parent portfolio card
+  const portfolioCard = link.closest('.portfolio-card');
+  if (portfolioCard) {
+    // Find the image within this card
+    const img = portfolioCard.querySelector('img');
+    if (img && img.src) {
+      // Set the data-image attribute to the image source
+      link.setAttribute('data-image', img.src);
+      // Change href to prevent default behavior
+      link.href = 'javascript:void(0)';
+    }
+  }
+  
+  // Add click event to open modal
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const imgSrc = this.getAttribute("data-image");
+    if (imgSrc) {
+      modal.style.display = "flex";
+      modalImg.src = imgSrc;
+    }
+  });
+});
+
+// Close modal when clicking on X
+closeBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Close modal when clicking outside the image
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
 
 /**
  * PRELOADER
