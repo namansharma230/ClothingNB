@@ -88,6 +88,92 @@
       </div>
     </section>
 
+    <!-- Skills Marquee Strip -->
+    <section class="skills-marquee">
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <span class="skill-item" data-tooltip="General-purpose programming language">Python</span>
+          <span class="skill-item" data-tooltip="Latest version of HTML standard">HTML-5</span>
+          <span class="skill-item" data-tooltip="Programming language for web">Javascript</span>
+          <span class="skill-item" data-tooltip="Styling language for web">CSS</span>
+          <span class="skill-item" data-tooltip="JavaScript library for UI">React</span>
+          <span class="skill-item" data-tooltip="Scientific computing library">Numpy</span>
+          <span class="skill-item" data-tooltip="Machine learning framework">Tensorflow</span>
+          <span class="skill-item" data-tooltip="Computer vision library">OpenCV</span>
+          <span class="skill-item" data-tooltip="HTML/CSS to PDF converter">WeasyPrint</span>
+          <span class="skill-item" data-tooltip="Extract, Transform, Load">ETL</span>
+          <span class="skill-item" data-tooltip="Convolutional Neural Networks">CNN</span>
+          <span class="skill-item" data-tooltip="Long Short-Term Memory networks">LSTM</span>
+          <span class="skill-item" data-tooltip="Object detection algorithm">YOLOv8</span>
+          <span class="skill-item" data-tooltip="Natural Language Processing">NLP</span>
+          <span class="skill-item" data-tooltip="Data analysis library">Pandas</span>
+          <span class="skill-item" data-tooltip="Modern API framework">FastAPI</span>
+          <span class="skill-item" data-tooltip="Time series database">InfluxDB</span>
+          <span class="skill-item" data-tooltip="Deep learning framework">PyTorch</span>
+          <span class="skill-item" data-tooltip="Web scraping library">BeautifulSoup</span>
+          <span class="skill-item" data-tooltip="Relational database">PostgreSQL</span>
+          <span class="skill-item" data-tooltip="Version control system">Git</span>
+          <span class="skill-item" data-tooltip="Open source operating system">Linux OS</span>
+          <span class="skill-item" data-tooltip="Autonomous AI systems">Agentic AI</span>
+          <span class="skill-item" data-tooltip="Security testing tool">Burp Suite</span>
+          <span class="skill-item" data-tooltip="API development platform">Postman API</span>
+          <span class="skill-item" data-tooltip="Automation server">Jenkins</span>
+          <span class="skill-item" data-tooltip="Test automation framework">Selenium</span>
+          <span class="skill-item" data-tooltip="System modeling tool">Simulink</span>
+          <span class="skill-item" data-tooltip="Agile framework">Scrum</span>
+          <span class="skill-item" data-tooltip="Project management tool">Jira</span>
+        </div>
+        <!-- Duplicate for seamless scrolling -->
+        <div class="marquee-content">
+          <span class="skill-item" data-tooltip="General-purpose programming language">Python</span>
+          <span class="skill-item" data-tooltip="Latest version of HTML standard">HTML-5</span>
+          <span class="skill-item" data-tooltip="Programming language for web">Javascript</span>
+          <span class="skill-item" data-tooltip="Styling language for web">CSS</span>
+          <span class="skill-item" data-tooltip="JavaScript library for UI">React</span>
+          <span class="skill-item" data-tooltip="Scientific computing library">Numpy</span>
+          <span class="skill-item" data-tooltip="Machine learning framework">Tensorflow</span>
+          <span class="skill-item" data-tooltip="Computer vision library">OpenCV</span>
+          <span class="skill-item" data-tooltip="HTML/CSS to PDF converter">WeasyPrint</span>
+          <span class="skill-item" data-tooltip="Extract, Transform, Load">ETL</span>
+          <span class="skill-item" data-tooltip="Convolutional Neural Networks">CNN</span>
+          <span class="skill-item" data-tooltip="Long Short-Term Memory networks">LSTM</span>
+          <span class="skill-item" data-tooltip="Object detection algorithm">YOLOv8</span>
+          <span class="skill-item" data-tooltip="Natural Language Processing">NLP</span>
+          <span class="skill-item" data-tooltip="Data analysis library">Pandas</span>
+          <span class="skill-item" data-tooltip="Modern API framework">FastAPI</span>
+          <span class="skill-item" data-tooltip="Time series database">InfluxDB</span>
+          <span class="skill-item" data-tooltip="Deep learning framework">PyTorch</span>
+          <span class="skill-item" data-tooltip="Web scraping library">BeautifulSoup</span>
+          <span class="skill-item" data-tooltip="Relational database">PostgreSQL</span>
+          <span class="skill-item" data-tooltip="Version control system">Git</span>
+          <span class="skill-item" data-tooltip="Open source operating system">Linux OS</span>
+          <span class="skill-item" data-tooltip="Autonomous AI systems">Agentic AI</span>
+          <span class="skill-item" data-tooltip="Security testing tool">Burp Suite</span>
+          <span class="skill-item" data-tooltip="API development platform">Postman API</span>
+          <span class="skill-item" data-tooltip="Automation server">Jenkins</span>
+          <span class="skill-item" data-tooltip="Test automation framework">Selenium</span>
+          <span class="skill-item" data-tooltip="System modeling tool">Simulink</span>
+          <span class="skill-item" data-tooltip="Agile framework">Scrum</span>
+          <span class="skill-item" data-tooltip="Project management tool">Jira</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skill Detail Popup -->
+    <div id="skillDetailPopup" class="skill-detail-popup">
+      <div class="skill-detail-content">
+        <span class="skill-detail-close">&times;</span>
+        <h3 class="skill-detail-title">Skill Title</h3>
+        <div class="skill-detail-description">Detailed description will appear here.</div>
+        <div class="skill-detail-projects">
+          <h4>Related Projects:</h4>
+          <ul class="skill-projects-list">
+            <!-- Projects will be populated dynamically -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <section class="skills">
       <div class="container">
         <div class="title-wrapper">
@@ -169,6 +255,30 @@
         
       </div>
     </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="project-modal">
+      <div class="project-modal-content">
+        <span class="project-modal-close">&times;</span>
+        <h2 class="project-modal-category">Category Title</h2>
+        
+        <div class="project-cards-container">
+          <!-- Project cards will be inserted here dynamically -->
+        </div>
+        
+        <div class="project-navigation">
+          <button class="nav-btn prev-btn" id="prevProject">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </button>
+          <div class="project-indicator">
+            <span id="currentProject">1</span>/<span id="totalProjects">3</span>
+          </div>
+          <button class="nav-btn next-btn" id="nextProject">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- 
     - #FOOTER

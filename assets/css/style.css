@@ -98,6 +98,218 @@ data,
 button,
 ion-icon { display: block; }
 
+
+/*-----------------------------------*\
+  #SKILLS MARQUEE
+\*-----------------------------------*/
+
+.skills-marquee {
+  background: var(--eerie-black);
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+  border-top: 1px solid var(--white_a10);
+  border-bottom: 1px solid var(--white_a10);
+}
+
+.marquee-container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  padding-right: 30px;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.skill-item {
+  color: var(--white);
+  font-family: var(--ff-syne);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 30px;
+  background-color: var(--white_a5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  /* For tooltip positioning */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-item:hover {
+  background-color: var(--white_a10);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--white_a10), transparent);
+  transition: 0.5s;
+}
+
+.skill-item:hover::before {
+  left: 100%;
+}
+
+/* Pause animation on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Tooltip styling */
+.skill-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--eerie-black);
+  color: var(--white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: var(--fs-7);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  border: 1px solid var(--white_a10);
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: -30px;
+}
+
+.skill-item.pulse {
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Skill Detail Popup */
+.skill-detail-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-detail-content {
+  background-color: var(--raisin-black);
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.4s;
+  position: relative;
+  border: 1px solid var(--white_a10);
+}
+
+@keyframes zoomIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.skill-detail-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.skill-detail-close:hover {
+  color: var(--roman-silver);
+  transform: rotate(90deg);
+}
+
+.skill-detail-title {
+  color: var(--white);
+  font-size: var(--fs-4);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--white_a10);
+  padding-bottom: 10px;
+}
+
+.skill-detail-description {
+  color: var(--roman-silver);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: var(--fs-6);
+}
+
+.skill-projects h4 {
+  color: var(--white);
+  font-size: var(--fs-6);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.skill-projects-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-projects-list li {
+  background-color: var(--white_a5);
+  margin-bottom: 8px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: var(--roman-silver);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-projects-list li:hover {
+  background-color: var(--white_a10);
+  color: var(--white);
+  transform: translateX(5px);
+}
+
+/* End of Skill Detail Popup Styling */
+
 /*-----------------------------------*\
   #IMAGE MODAL
 \*-----------------------------------*/
